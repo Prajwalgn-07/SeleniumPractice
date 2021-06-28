@@ -3,6 +3,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -23,6 +24,8 @@ public class SeleniumPractice {
 //        FileOutputStream outputStream=new FileOutputStream("/Users/prajwal/Desktop/testvagrant /assignment projects/SeleniumJava/src/main/java/Properties/file.properties");
 //        properties.setProperty();
 //        properties.store(outputStream,null);
+//        WebDriverManager.firefoxdriver().setup();
+//        WebDriver driver=new FirefoxDriver();
         WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
