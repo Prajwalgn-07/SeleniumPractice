@@ -1,6 +1,9 @@
+package pages;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import pages.PageInitialisation;
 
 public class CartPage extends PageInitialisation {
     public CartPage(WebDriver driver){

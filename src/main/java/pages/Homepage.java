@@ -1,8 +1,10 @@
+package pages;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Homepage extends PageInitialisation{
+public class Homepage extends PageInitialisation {
     public Homepage(WebDriver driver){
         super(driver);
     }
@@ -12,6 +14,8 @@ public class Homepage extends PageInitialisation{
     WebElement longPrintedDress;
     @FindBy(xpath = "//*[@id=\"header\"]/div[3]/div/div/div[3]/div/a")
     WebElement cart;
+    @FindBy(linkText = "Sign in")
+    WebElement signIn;
     public void ViewShortPrintedDress(){
         shortPrintedDress.click();
     }
@@ -21,4 +25,8 @@ public class Homepage extends PageInitialisation{
     public void ViewCart(){
         cart.click();
     }
+    public void GoToSignInPage(){
+        signIn.click();
+    }
+
 }
