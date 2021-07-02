@@ -1,17 +1,8 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class MainTest {
@@ -32,9 +23,9 @@ public class MainTest {
         driver.get("https://www.google.com");
         driver.get("http://automationpractice.com/index.php");
         Homepage homepage=new Homepage(driver);
-        Cart cart=new Cart(driver);
-        ShortPrintedDress shortPrintedDress=new ShortPrintedDress(driver);
-        LongPrintedDress longPrintedDress=new LongPrintedDress(driver);
+        CartPage cart=new CartPage(driver);
+        ShortPrintedDressPage shortPrintedDress=new ShortPrintedDressPage(driver);
+        LongPrintedDressPage longPrintedDress=new LongPrintedDressPage(driver);
         try {
             homepage.ViewShortPrintedDress();
             shortPrintedDress.AddShortPrintedDressToCart(driver);

@@ -5,8 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LongPrintedDress extends PageInitialisation{
-    public LongPrintedDress(WebDriver driver) {
+public class LongPrintedDressPage extends PageInitialisation{
+    public LongPrintedDressPage(WebDriver driver) {
         super(driver);
     }
     @FindBy(xpath = "//*[@id=\"add_to_cart\"]/button")
