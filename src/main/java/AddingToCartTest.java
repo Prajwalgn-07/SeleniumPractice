@@ -5,7 +5,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class MainTest {
+public class AddingToCartTest {
     public static void main(String[] args) throws IOException {
 //        Properties properties=new Properties();
 //        FileInputStream inputStream=new FileInputStream("/Users/prajwal/Desktop/testvagrant /assignment projects/SeleniumJava/src/main/java/Properties/file.properties");
