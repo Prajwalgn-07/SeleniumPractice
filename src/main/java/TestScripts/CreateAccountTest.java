@@ -16,7 +16,8 @@ public class CreateAccountTest {
         driver.get("http://automationpractice.com/index.php");
         Homepage homepage=new Homepage(driver);
         CreateAccountPage createAccountPage=new CreateAccountPage(driver);
-        LoginPage loginPage=new LoginPage(driver);        try {
+        LoginPage loginPage=new LoginPage(driver);
+        try {
             homepage.GoToSignInPage();
             loginPage.TypeEmail();
             loginPage.ClickCreateAccount();
