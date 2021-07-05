@@ -1,4 +1,4 @@
-package pages;
+package Pages;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-import pages.PageInitialisation;
 
 import java.io.FileReader;
 import java.io.IOException;

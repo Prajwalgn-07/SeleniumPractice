@@ -1,11 +1,10 @@
-package pages;
+package Pages;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.json.Json;
 import org.openqa.selenium.support.FindBy;
 
 import java.io.FileReader;

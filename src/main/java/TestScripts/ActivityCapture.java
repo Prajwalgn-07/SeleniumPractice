@@ -1,10 +1,11 @@
 package TestScripts;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.events.WebDriverEventListener;
+
+import java.io.File;
+import java.io.IOException;
 
 public class ActivityCapture implements WebDriverEventListener {
 
@@ -81,12 +82,20 @@ public class ActivityCapture implements WebDriverEventListener {
 
     @Override
     public void beforeClickOn(WebElement webElement, WebDriver webDriver) {
-        System.out.println("Before clicking"+webElement.toString());
+        System.out.println("Taking Screenshot of "+webElement.getText());
+        TakesScreenshot screenshot=((TakesScreenshot) webDriver);
+        File sourceFile=screenshot.getScreenshotAs(OutputType.FILE);
+        File destinationFile=new File("/Users/prajwal/Desktop/testvagrant /assignment projects/seleniumjava/src/main/java/Screenshots/"+webElement.getText()+".jpeg");
+        try {
+            FileUtils.copyFile(sourceFile,destinationFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void afterClickOn(WebElement webElement, WebDriver webDriver) {
-        System.out.println("After clicking"+webElement.toString());
+
     }
 
     @Override
