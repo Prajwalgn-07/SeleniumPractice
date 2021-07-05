@@ -1,14 +1,18 @@
 package TestScripts;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class DriverSelection {
@@ -42,5 +46,13 @@ public class DriverSelection {
             driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
             return driver;
         }
+    }
+    public static WebDriver RemoteWebDriver(){
+        DesiredCapabilities capabilities=new DesiredCapabilities();
+        capabilities.setBrowserName("chrome");//change to firefox, if firefox is needed
+        String nodeUrl;//initialize the node url to this variable
+        capabilities.setPlatform(Platform.MAC);//we can change it to which ever the node system is
+        WebDriver driver=new RemoteWebDriver(new URL(nodeUrl),capabilities);
+        return driver;
     }
 }
