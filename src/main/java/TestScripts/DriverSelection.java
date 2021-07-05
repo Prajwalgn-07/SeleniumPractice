@@ -12,6 +12,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
@@ -47,12 +48,13 @@ public class DriverSelection {
             return driver;
         }
     }
-    public static WebDriver RemoteWebDriver(){
+    public static WebDriver RemoteWebDriver() throws MalformedURLException{
         DesiredCapabilities capabilities=new DesiredCapabilities();
         capabilities.setBrowserName("chrome");//change to firefox, if firefox is needed
         String nodeUrl;//initialize the node url to this variable
         capabilities.setPlatform(Platform.MAC);//we can change it to which ever the node system is
-        WebDriver driver=new RemoteWebDriver(new URL(nodeUrl),capabilities);
+        WebDriver driver;
+        driver = new RemoteWebDriver(new URL(nodeUrl), capabilities);
         return driver;
     }
 }
