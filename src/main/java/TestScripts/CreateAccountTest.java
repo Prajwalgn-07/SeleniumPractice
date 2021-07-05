@@ -12,7 +12,6 @@ import java.util.concurrent.TimeUnit;
 public class CreateAccountTest {
     public static void main(String[] args) throws IOException, ParseException {
         WebDriver driver=DriverSelection.select("chrome");
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get("https://www.google.com");
         driver.get("http://automationpractice.com/index.php");
         Homepage homepage=new Homepage(driver);
