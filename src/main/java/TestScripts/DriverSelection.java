@@ -57,5 +57,4 @@ public class DriverSelection {
 //        WebDriver driver;
 //        driver = new RemoteWebDriver(new URL(nodeUrl), capabilities);
 //        return driver;
-//    }
 }
