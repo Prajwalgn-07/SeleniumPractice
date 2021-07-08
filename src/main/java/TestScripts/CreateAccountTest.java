@@ -23,7 +23,7 @@ public class CreateAccountTest {
             loginPage.ClickCreateAccount();
             createAccountPage.FillDetails();
             System.out.println(driver.getTitle());
-//            createAccountPage.submitDetails();
+            createAccountPage.submitDetails();
         }
         finally {
             driver.quit();
