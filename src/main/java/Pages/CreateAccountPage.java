@@ -16,7 +16,9 @@ public class CreateAccountPage extends PageInitialisation {
         super(driver);
     }
     @FindBy(id="id_gender1")
-    WebElement gender;
+    WebElement male;
+    @FindBy(id="id_gender2")
+    WebElement female;
     @FindBy(id="customer_firstname")
     WebElement firstname;
     @FindBy(id="customer_lastname")
@@ -46,10 +48,15 @@ public class CreateAccountPage extends PageInitialisation {
     @FindBy(id="submitAccount")
     WebElement submitDetails;
     JSONParser parser=new JSONParser();
-    Object obj=parser.parse(new FileReader("/Users/prajwal/Desktop/testvagrant /assignment projects/seleniumjava/src/main/java/Properties/details.json"));
+    Object obj=parser.parse(new FileReader("/Users/prajwal/Desktop/testvagrant /assignment projects/seleniumjava/SeleniumPractice/src/main/java/Properties/details.json"));
     JSONObject jsonObject=(JSONObject) obj;
     public void FillDetails(){
-        gender.click();
+        if(jsonObject.get("gender").equals("male")){
+            male.click();
+        }
+        else{
+            female.click();
+        }
         firstname.sendKeys((String)jsonObject.get("firstName"));
         lastname.sendKeys((String)jsonObject.get("lastName"));
         password.sendKeys((String)jsonObject.get("password"));
@@ -61,8 +68,10 @@ public class CreateAccountPage extends PageInitialisation {
         year.selectByValue(((String)jsonObject.get("year")));
         address.sendKeys((String)jsonObject.get("address"));
         cityName.sendKeys((String)jsonObject.get("city"));
-        Select state=new Select(countryId);
-        state.selectByValue("21");
+        Select country=new Select(countryId);
+        country.selectByValue("21");
+        Select state=new Select(stateId);
+        state.selectByValue("47");
         postcode.sendKeys((String)jsonObject.get("postCode"));
         mobileNumber.sendKeys((String)jsonObject.get("mobileNumber"));
         aliasAddress.clear();
