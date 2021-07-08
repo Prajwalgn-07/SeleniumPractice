@@ -12,27 +12,36 @@ How to use
 4. Go to the pom file and add the following dependencies
 
 SeleniumJava dependency(don't copy this sentence):
+
+```
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
     <version>3.141.59</version>
 </dependency>
+```
 
 WebdriveManager(don't copy this sentence):
+
+```
 <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 <dependency>
     <groupId>io.github.bonigarcia</groupId>
     <artifactId>webdrivermanager</artifactId>
     <version>4.4.3</version>
 </dependency>
+```
 
 json-simple(don't copy this sentence):
+
+```
 <dependency>  
     <groupId>com.googlecode.json-simple</groupId>  
     <artifactId>json-simple</artifactId>  
     <version>1.1</version>  
   </dependency>
+```
   
 5. Change the paths of json file and Screenshot package according to your system path wherever mentioned 
 6. Go to testscripts package and run AddingToCartTest and Create AccountTest one after the other
