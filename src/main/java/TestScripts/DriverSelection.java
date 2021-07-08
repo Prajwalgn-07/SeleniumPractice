@@ -48,13 +48,14 @@ public class DriverSelection {
             return driver;
         }
     }
-    public static WebDriver RemoteWebDriver() throws MalformedURLException{
-        DesiredCapabilities capabilities=new DesiredCapabilities();
-        capabilities.setBrowserName("chrome");//change to firefox, if firefox is needed
-        String nodeUrl;//initialize the node url to this variable
-        capabilities.setPlatform(Platform.MAC);//we can change it to which ever the node system is
-        WebDriver driver;
-        driver = new RemoteWebDriver(new URL(nodeUrl), capabilities);
-        return driver;
-    }
+    /*uncomment this class if u have the node url and initialize the url*/
+//    public static WebDriver RemoteWebDriver() throws MalformedURLException{
+//        DesiredCapabilities capabilities=new DesiredCapabilities();
+//        capabilities.setBrowserName("chrome");//change to firefox, if firefox is needed
+//        String nodeUrl;//initialize the node url to this variable
+//        capabilities.setPlatform(Platform.MAC);//we can change it to which ever the node system is
+//        WebDriver driver;
+//        driver = new RemoteWebDriver(new URL(nodeUrl), capabilities);
+//        return driver;
+//    }
 }
